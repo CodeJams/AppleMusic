@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42AA086A2A24D96000C331A6 /* PullDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AA08692A24D96000C331A6 /* PullDownMenu.swift */; };
 		C2B7FCC62A1F8A4C00646ABE /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B7FCC52A1F8A4C00646ABE /* ProgressBar.swift */; };
 		F248A97B2A1E424000D29A5B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248A97A2A1E424000D29A5B /* UIImage+Extension.swift */; };
 		F2E299092A24CA0300B27964 /* NameMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E299082A24CA0300B27964 /* NameMusicView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42AA08692A24D96000C331A6 /* PullDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullDownMenu.swift; sourceTree = "<group>"; };
 		C2B7FCC52A1F8A4C00646ABE /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		F248A97A2A1E424000D29A5B /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F2E299082A24CA0300B27964 /* NameMusicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameMusicView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				C2B7FCC52A1F8A4C00646ABE /* ProgressBar.swift */,
 				FAD66A352A1F9AC60053A584 /* Backgroud.swift */,
 				FA66241C2A20D2DA0065943B /* MusicCoverView.swift */,
+				42AA08692A24D96000C331A6 /* PullDownMenu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				F248A97B2A1E424000D29A5B /* UIImage+Extension.swift in Sources */,
 				FA26889A2A1CFCBD0043DF90 /* MusicPlayer.swift in Sources */,
 				C2B7FCC62A1F8A4C00646ABE /* ProgressBar.swift in Sources */,
+				42AA086A2A24D96000C331A6 /* PullDownMenu.swift in Sources */,
 				FA2688982A1CFCBD0043DF90 /* Apple_MusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,9 +18,12 @@ struct MusicPlayer: View {
             VStack {
                 //imagem da musica
                 MusicCoverView(index: $index, image: $image, musicCoverSize: $musicCoverSize)
+                HStack(spacing: 140){
+                    //nome da musica
+                    NameMusicView(index: $index).foregroundColor(.white)
+                    PullDownMenu()
+                }
                 
-                //nome da musica
-                NameMusicView(index: $index).foregroundColor(.white)
                 
                 //Botões para tocar e passar a musica
                 HStack(spacing: 76){
