@@ -85,6 +85,10 @@ struct MusicPlayer: View {
                 
 //                AppleMusicProgressBar(currentTime: $musicController.currentTime, duration: musicController.duration)
 //
+                //Botões da parte inferior da tela
+                BottomButtons()
+                    .foregroundColor(Color.white)
+                
             }.padding()
             
         }.padding()
