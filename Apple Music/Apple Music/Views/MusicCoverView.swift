@@ -14,7 +14,7 @@ struct MusicCoverView: View {
                     .clipped()
                     .cornerRadius(7.19)
                     .shadow(radius: 10)
-                    .padding(.bottom, 150)
+                    .padding(.top, -300)
                     .padding(.horizontal, 60)
     }
 }

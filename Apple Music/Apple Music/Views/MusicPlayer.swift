@@ -15,12 +15,22 @@ struct MusicPlayer: View {
             //background
             Backgroud(index: $index, backgroundColor: $backgroundColor, image: $image)
             
+            //imagem da musica
+            MusicCoverView(index: $index, image: $image, musicCoverSize: $musicCoverSize)
+            
             VStack {
-                //imagem da musica
-                MusicCoverView(index: $index, image: $image, musicCoverSize: $musicCoverSize)
                 
-                //nome da musica
-                NameMusicView(index: $index).foregroundColor(.white)
+                HStack{
+                    //nome da musica
+                    NameMusicView(index: $index).foregroundColor(.white)
+                    
+                    Spacer()
+                    //pull down menu
+                    PullDownMenu()
+                    
+                }
+                .padding(.top, 260)
+                .padding(.horizontal, 35)
                 
                 //Botões para tocar e passar a musica
                 HStack(spacing: 76){
@@ -43,7 +53,7 @@ struct MusicPlayer: View {
 
                     }
                     if(isPaused == true){
-                        Button (action: {musicController.playMusic(index: index); isPaused = false;                             musicCoverSize = 362
+                        Button (action: {musicController.playMusic(index: index); isPaused = false;                             musicCoverSize = 330
 }){
                             Image(systemName: "play.fill")
                                 .resizable()
@@ -88,10 +98,11 @@ struct MusicPlayer: View {
                 //Botões da parte inferior da tela
                 BottomButtons()
                     .foregroundColor(Color.white)
-                
-            }.padding()
+                    
+
+            }
             
-        }.padding()
+        }
         .edgesIgnoringSafeArea(.all)
         .onAppear {self.setAverageColor()}
 
