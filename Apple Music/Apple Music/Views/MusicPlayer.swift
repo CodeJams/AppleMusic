@@ -7,8 +7,8 @@ struct MusicPlayer: View {
     @State private var backgroundColor: UIColor = .clear
     @State var isPaused = true
     @State var index = 0
-	@StateObject var musicController = MusicController()
     @State var musicCoverSize = 252
+	@StateObject var controller: MusicController
 
     var body: some View {
         ZStack {
@@ -30,10 +30,10 @@ struct MusicPlayer: View {
                             setAverageColor()
                         }
                         if isPaused == false{
-                            musicController.playMusic(index: index)
+                            controller.playMusic(index: index)
                         }
                         else {
-                            musicController.pauseMusic()
+                            controller.pauseMusic()
                         }
                     }){
                         Image(systemName: "backward.fill")
@@ -43,7 +43,7 @@ struct MusicPlayer: View {
 
                     }
                     if(isPaused == true){
-                        Button (action: {musicController.playMusic(index: index); isPaused = false;                             musicCoverSize = 362
+                        Button (action: {controller.playMusic(index: index); isPaused = false;                             musicCoverSize = 362
 }){
                             Image(systemName: "play.fill")
                                 .resizable()
@@ -53,7 +53,7 @@ struct MusicPlayer: View {
 
                         }
                     }else{
-                        Button (action: {musicController.pauseMusic(); isPaused = true;                             musicCoverSize = 252}){
+                        Button (action: {controller.pauseMusic(); isPaused = true;                             musicCoverSize = 252}){
                             Image(systemName: "pause.fill")
                                 .resizable()
                                 .frame(width: 35, height: 45, alignment: .center)
@@ -69,10 +69,10 @@ struct MusicPlayer: View {
                         }
                         setAverageColor()
                         if isPaused == false{
-                            musicController.playMusic(index: index)
+                            controller.playMusic(index: index)
                         }
                         else {
-                            musicController.pauseMusic()
+                            controller.pauseMusic()
                         }
                     }){
                         Image(systemName: "forward.fill")
@@ -83,7 +83,7 @@ struct MusicPlayer: View {
                     }
                 }
                 
-//                AppleMusicProgressBar(currentTime: $musicController.currentTime, duration: musicController.duration)
+                ProgressBar()
 //
                 //Botões da parte inferior da tela
                 BottomButtons()
@@ -107,7 +107,7 @@ struct MusicPlayer: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MusicPlayer()
+		MusicPlayer(controller: )
     }
 }
 

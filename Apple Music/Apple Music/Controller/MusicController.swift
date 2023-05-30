@@ -1,16 +1,16 @@
 import UIKit
 import AVFoundation
-
+ 
 class MusicController: UIViewController, ObservableObject {
-    
     var listaDeMusicas = ["musica1", "musica2", "musica3", "musica3"]
     var audioPlayer: AVAudioPlayer?
     var lastPlaybackTime: TimeInterval = 0
-    
     // Metodo para controlar o tempo
-    @Published var currentTime: TimeInterval = 0
+	var currentTime: TimeInterval {
+		audioPlayer?.currentTime ?? 0
+	}
     
-    var duration: TimeInterval {
+	var duration: TimeInterval {
         audioPlayer?.duration ?? 0
     }
     
