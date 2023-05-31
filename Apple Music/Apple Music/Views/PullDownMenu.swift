@@ -48,7 +48,6 @@ struct PullDownMenu: View {
                     .foregroundColor(.white)
                     .opacity(0.9)
                     .symbolRenderingMode(.hierarchical)
-                    
             }
         }
     }

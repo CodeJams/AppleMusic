@@ -17,6 +17,7 @@ struct BottomButtons: View {
                 Image(systemName: "quote.bubble")}
             .font(.system(size: 30))
 
+            Spacer()
             
             Button {
                 print("Airplay button was tapped")
@@ -24,6 +25,7 @@ struct BottomButtons: View {
                 Image(systemName: "airplayaudio")}
             .font(.system(size: 30))
 
+            Spacer()
             
             Button {
                 print("list button was tapped")
