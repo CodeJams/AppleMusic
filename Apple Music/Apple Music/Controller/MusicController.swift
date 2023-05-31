@@ -5,6 +5,7 @@ class MusicController: UIViewController, ObservableObject {
     var listaDeMusicas = ["musica1", "musica2", "musica3", "musica3"]
     var audioPlayer: AVAudioPlayer?
     var lastPlaybackTime: TimeInterval = 0
+	
     // Metodo para controlar o tempo
 	var currentTime: TimeInterval {
 		audioPlayer?.currentTime ?? 0

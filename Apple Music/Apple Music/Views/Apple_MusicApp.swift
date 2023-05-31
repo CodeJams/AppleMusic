@@ -4,7 +4,7 @@ import SwiftUI
 struct Apple_MusicApp: App {
     var body: some Scene {
         WindowGroup {
-            MusicPlayer()
+			MusicPlayer(controller: MusicController())
         }
     }
 }

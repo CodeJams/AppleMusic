@@ -83,7 +83,7 @@ struct MusicPlayer: View {
                     }
                 }
                 
-                ProgressBar()
+				var tempo = controller.currentTime
 //
                 //Botões da parte inferior da tela
                 BottomButtons()
@@ -105,9 +105,10 @@ struct MusicPlayer: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-		MusicPlayer(controller: )
-    }
-}
-
+//struct ContentView_Previews: PreviewProvider {
+//	@ObservedObject var controller: MusicController
+//    static var previews: some View {
+//		MusicPlayer(controller: controller)
+//    }
+//}
+//
