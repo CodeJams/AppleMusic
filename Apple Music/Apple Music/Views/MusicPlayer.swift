@@ -60,7 +60,7 @@ struct MusicPlayer: View {
                                 
                             }
                             if(isPaused == true){
-                                Button (action: {musicController.playMusic(index: index); isPaused = false;                             musicCoverSize = 350
+                                Button (action: {musicController.playMusic(index: index); isPaused = false;                             musicCoverSize = 340
                                 }){
                                     Image(systemName: "play.fill")
                                         .resizable()
