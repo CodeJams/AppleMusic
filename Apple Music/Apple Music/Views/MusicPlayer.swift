@@ -11,90 +11,109 @@ struct MusicPlayer: View {
     @State var musicCoverSize = 252
 
     var body: some View {
+      //para resolver o problema usar geomnetry READER PARA ESCOLHER A POSIÇAO FIXA DO ITEM
+
         ZStack {
             //background
             Backgroud(index: $index, backgroundColor: $backgroundColor, image: $image)
-            
-            VStack {
-                //imagem da musica
-                MusicCoverView(index: $index, image: $image, musicCoverSize: $musicCoverSize)
-                
-                //nome da musica
-                NameMusicView(index: $index).foregroundColor(.white)
-                
-                //Botões para tocar e passar a musica
-                HStack(spacing: 76){
-                    Button (action: {
-                        if index != 0{
-                            index -= 1;
-                            setAverageColor()
-                        }
-                        if isPaused == false{
-                            musicController.playMusic(index: index)
-                        }
-                        else {
-                            musicController.pauseMusic()
-                        }
-                    }){
-                        Image(systemName: "backward.fill")
-                            .resizable()
-                            .frame(width: 53, height: 40, alignment: .center)
-                            .foregroundColor(Color.white)
 
-                    }
-                    if(isPaused == true){
-                        Button (action: {musicController.playMusic(index: index); isPaused = false;                             musicCoverSize = 362
-}){
-                            Image(systemName: "play.fill")
-                                .resizable()
-                                .frame(width: 35, height: 45, alignment: .center)
-                                .foregroundColor(Color.white)
+            GeometryReader { geometry in
+                VStack {
+                    //imagem da musica
+                    VStack(alignment: .center) {
+                        Spacer()
+                        MusicCoverView(index: $index, image: $image, musicCoverSize: $musicCoverSize)
+                        Spacer()
+                    }.frame(width: geometry.size.width,
+                            height: geometry.size.height * 0.5)
+                    VStack {
+                        HStack{
+                            //nome da musica
+                            NameMusicView(index: $index).foregroundColor(.white)
                             
-
+                            Spacer()
+                            //pull down menu
+                            PullDownMenu()
+                            
                         }
-                    }else{
-                        Button (action: {musicController.pauseMusic(); isPaused = true;                             musicCoverSize = 252}){
-                            Image(systemName: "pause.fill")
-                                .resizable()
-                                .frame(width: 35, height: 45, alignment: .center)
-                                .foregroundColor(Color.white)
-
+                        //.padding(.top, 260)
+                        .padding(.horizontal, 35)
+                        
+                        //Botões para tocar e passar a musica
+                        HStack(spacing: 76){
+                            Button (action: {
+                                if index != 0{
+                                    index -= 1;
+                                    setAverageColor()
+                                }
+                                if isPaused == false{
+                                    musicController.playMusic(index: index)
+                                }
+                                else {
+                                    musicController.pauseMusic()
+                                }
+                            }){
+                                Image(systemName: "backward.fill")
+                                    .resizable()
+                                    .frame(width: 38, height: 24, alignment: .center)
+                                    .foregroundColor(Color.white)
+                                
+                            }
+                            if(isPaused == true){
+                                Button (action: {musicController.playMusic(index: index); isPaused = false;                             musicCoverSize = 350
+                                }){
+                                    Image(systemName: "play.fill")
+                                        .resizable()
+                                        .frame(width: 35, height: 40, alignment: .center)
+                                        .foregroundColor(Color.white)
+                                    
+                                    
+                                }
+                            }else{
+                                Button (action: {musicController.pauseMusic(); isPaused = true;                             musicCoverSize = 252}){
+                                    Image(systemName: "pause.fill")
+                                        .resizable()
+                                        .frame(width: 35, height: 40, alignment: .center)
+                                        .foregroundColor(Color.white)
+                                    
+                                }
+                            }
+                            Button (action: {
+                                if index == 3{
+                                    index = 0
+                                }else{
+                                    index += 1;
+                                }
+                                setAverageColor()
+                                if isPaused == false{
+                                    musicController.playMusic(index: index)
+                                }
+                                else {
+                                    musicController.pauseMusic()
+                                }
+                            }){
+                                Image(systemName: "forward.fill")
+                                    .resizable()
+                                    .frame(width: 38, height: 24, alignment: .center)
+                                    .foregroundColor(Color.white)
+                                
+                            }
                         }
-                    }
-                    Button (action: {
-                        if index == 3{
-                            index = 0
-                        }else{
-                            index += 1;
-                        }
-                        setAverageColor()
-                        if isPaused == false{
-                            musicController.playMusic(index: index)
-                        }
-                        else {
-                            musicController.pauseMusic()
-                        }
-                    }){
-                        Image(systemName: "forward.fill")
-                            .resizable()
-                            .frame(width: 53, height: 40, alignment: .center)
+                        
+                        BottomButtons()
                             .foregroundColor(Color.white)
+                            .padding(.horizontal, 60)
+                            .opacity(0.7)
+                        
+                    }.frame(width: geometry.size.width , height: geometry.size.height * 0.5)
 
-                    }
+                    
                 }
                 
-//                AppleMusicProgressBar(currentTime: $musicController.currentTime, duration: musicController.duration)
-//
-                //Botões da parte inferior da tela
-                BottomButtons()
-                    .foregroundColor(Color.white)
-                
-            }.padding()
-            
-        }.padding()
-        .edgesIgnoringSafeArea(.all)
-        .onAppear {self.setAverageColor()}
-
+                .edgesIgnoringSafeArea(.all)
+                .onAppear {self.setAverageColor()}
+            }
+        }
     } 
     
     //Devolve a cor média
