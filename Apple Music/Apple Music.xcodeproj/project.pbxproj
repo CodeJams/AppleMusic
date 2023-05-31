@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C2FF2ED22A27805E00256B0E /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FF2ED12A27805E00256B0E /* VolumeSlider.swift */; };
+		C2FF2ED42A27807C00256B0E /* MusicProgressSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FF2ED32A27807C00256B0E /* MusicProgressSlider.swift */; };
 		F248A97B2A1E424000D29A5B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248A97A2A1E424000D29A5B /* UIImage+Extension.swift */; };
 		F2E299092A24CA0300B27964 /* NameMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E299082A24CA0300B27964 /* NameMusicView.swift */; };
 		F2E5016E2A24E034008935BC /* BottonButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5016D2A24E034008935BC /* BottonButtons.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		C2FF2ED12A27805E00256B0E /* VolumeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VolumeSlider.swift; path = ../../../../../../../../Downloads/VolumeSlider.swift; sourceTree = "<group>"; };
+		C2FF2ED32A27807C00256B0E /* MusicProgressSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicProgressSlider.swift; path = ../../../../../../../../Downloads/MusicProgressSlider.swift; sourceTree = "<group>"; };
 		F248A97A2A1E424000D29A5B /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F2E299082A24CA0300B27964 /* NameMusicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameMusicView.swift; sourceTree = "<group>"; };
 		F2E5016D2A24E034008935BC /* BottonButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottonButtons.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				F2E5016D2A24E034008935BC /* BottonButtons.swift */,
 				FAD66A352A1F9AC60053A584 /* Backgroud.swift */,
 				FA66241C2A20D2DA0065943B /* MusicCoverView.swift */,
+				C2FF2ED32A27807C00256B0E /* MusicProgressSlider.swift */,
 				C2FF2ED12A27805E00256B0E /* VolumeSlider.swift */,
 			);
 			path = Views;
@@ -194,6 +197,7 @@
 				C2FF2ED22A27805E00256B0E /* VolumeSlider.swift in Sources */,
 				FAD66A362A1F9AC60053A584 /* Backgroud.swift in Sources */,
 				F2E299092A24CA0300B27964 /* NameMusicView.swift in Sources */,
+				C2FF2ED42A27807C00256B0E /* MusicProgressSlider.swift in Sources */,
 				F248A97B2A1E424000D29A5B /* UIImage+Extension.swift in Sources */,
 				FA26889A2A1CFCBD0043DF90 /* MusicPlayer.swift in Sources */,
 				F2E5016E2A24E034008935BC /* BottonButtons.swift in Sources */,
