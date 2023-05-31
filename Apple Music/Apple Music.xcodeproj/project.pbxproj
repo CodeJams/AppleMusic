@@ -10,10 +10,12 @@
 		C2B7FCC62A1F8A4C00646ABE /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B7FCC52A1F8A4C00646ABE /* ProgressBar.swift */; };
 		F248A97B2A1E424000D29A5B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248A97A2A1E424000D29A5B /* UIImage+Extension.swift */; };
 		F2E299092A24CA0300B27964 /* NameMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E299082A24CA0300B27964 /* NameMusicView.swift */; };
+		F2E5016E2A24E034008935BC /* BottonButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5016D2A24E034008935BC /* BottonButtons.swift */; };
 		FA2688982A1CFCBD0043DF90 /* Apple_MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2688972A1CFCBD0043DF90 /* Apple_MusicApp.swift */; };
 		FA26889A2A1CFCBD0043DF90 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2688992A1CFCBD0043DF90 /* MusicPlayer.swift */; };
 		FA26889C2A1CFCBD0043DF90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA26889B2A1CFCBD0043DF90 /* Assets.xcassets */; };
 		FA26889F2A1CFCBD0043DF90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA26889E2A1CFCBD0043DF90 /* Preview Assets.xcassets */; };
+		FA3757D72A2628F5002787D7 /* PullDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3757D62A2628F5002787D7 /* PullDownMenu.swift */; };
 		FA66241D2A20D2DA0065943B /* MusicCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66241C2A20D2DA0065943B /* MusicCoverView.swift */; };
 		FAD66A2D2A1F84870053A584 /* musica2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAD66A2C2A1F84870053A584 /* musica2.mp3 */; };
 		FAD66A2F2A1F84C70053A584 /* musica3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAD66A2E2A1F84C70053A584 /* musica3.mp3 */; };
@@ -26,11 +28,13 @@
 		C2B7FCC52A1F8A4C00646ABE /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		F248A97A2A1E424000D29A5B /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F2E299082A24CA0300B27964 /* NameMusicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameMusicView.swift; sourceTree = "<group>"; };
+		F2E5016D2A24E034008935BC /* BottonButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottonButtons.swift; sourceTree = "<group>"; };
 		FA2688942A1CFCBD0043DF90 /* Apple Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2688972A1CFCBD0043DF90 /* Apple_MusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_MusicApp.swift; sourceTree = "<group>"; };
 		FA2688992A1CFCBD0043DF90 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		FA26889B2A1CFCBD0043DF90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA26889E2A1CFCBD0043DF90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA3757D62A2628F5002787D7 /* PullDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullDownMenu.swift; sourceTree = "<group>"; };
 		FA66241C2A20D2DA0065943B /* MusicCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCoverView.swift; sourceTree = "<group>"; };
 		FAD66A2C2A1F84870053A584 /* musica2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musica2.mp3; sourceTree = "<group>"; };
 		FAD66A2E2A1F84C70053A584 /* musica3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musica3.mp3; sourceTree = "<group>"; };
@@ -95,8 +99,10 @@
 				FA2688972A1CFCBD0043DF90 /* Apple_MusicApp.swift */,
 				FA2688992A1CFCBD0043DF90 /* MusicPlayer.swift */,
 				C2B7FCC52A1F8A4C00646ABE /* ProgressBar.swift */,
+				F2E5016D2A24E034008935BC /* BottonButtons.swift */,
 				FAD66A352A1F9AC60053A584 /* Backgroud.swift */,
 				FA66241C2A20D2DA0065943B /* MusicCoverView.swift */,
+				FA3757D62A2628F5002787D7 /* PullDownMenu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,8 +198,10 @@
 				F2E299092A24CA0300B27964 /* NameMusicView.swift in Sources */,
 				F248A97B2A1E424000D29A5B /* UIImage+Extension.swift in Sources */,
 				FA26889A2A1CFCBD0043DF90 /* MusicPlayer.swift in Sources */,
+				F2E5016E2A24E034008935BC /* BottonButtons.swift in Sources */,
 				C2B7FCC62A1F8A4C00646ABE /* ProgressBar.swift in Sources */,
 				FA2688982A1CFCBD0043DF90 /* Apple_MusicApp.swift in Sources */,
+				FA3757D72A2628F5002787D7 /* PullDownMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

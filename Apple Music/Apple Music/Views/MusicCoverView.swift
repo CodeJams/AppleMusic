@@ -14,7 +14,8 @@ struct MusicCoverView: View {
                     .clipped()
                     .cornerRadius(7.19)
                     .shadow(radius: 10)
-                    .padding(.bottom, 150)
-                    .padding(.horizontal, 60)
+                    .animation(.spring(dampingFraction: 0.4), value: musicCoverSize)
+                    .padding(.top, 240)
+                    //.padding(.horizontal, 60)
     }
 }
