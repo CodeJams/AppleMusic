@@ -20,7 +20,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Reprodução do aplicativo mobile na plataforma IOS que reproduz a tela de play do app Music nativo IOS.
+Reprodução do aplicativo mobile na plataforma IOS que reproduz a tela de play do app Music.
 
 ## 🔖 Layout
 
