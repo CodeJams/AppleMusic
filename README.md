@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img alt="AppleMusic" src="apple-music.png" width="30%">
+  <img alt="AppleMusic" src="apple-music.jpg" width="50%">
 </p>
 
 ## 🚀 Tecnologias
