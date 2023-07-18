@@ -1,11 +1,16 @@
+import SwiftUI
 import UIKit
 import AVFoundation
 
-class MusicController: UIViewController, ObservableObject {
+
+class MusicController: NSObject, ObservableObject {
     
     var listaDeMusicas = ["musica1", "musica2", "musica3", "musica3"]
     var audioPlayer: AVAudioPlayer?
     var lastPlaybackTime: TimeInterval = 0
+    @Published var volume: Float = 0.1
+    
+    var timer:Timer?
     
     // Metodo para controlar o tempo
     @Published var currentTime: TimeInterval = 0
@@ -18,7 +23,14 @@ class MusicController: UIViewController, ObservableObject {
         audioPlayer?.isPlaying ?? false
     }
     
+    @objc func timeEllapsed() {
+        currentTime = audioPlayer?.currentTime ?? 0
+    }
+    
     @objc func playMusic(index: Int) {
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MusicController.timeEllapsed), userInfo: nil, repeats: true)
+        
         guard let url = Bundle.main.url(forResource: listaDeMusicas[index], withExtension: "mp3") else {
             print("Erro ao carregar o arquivo de música")
             return
@@ -58,6 +70,14 @@ class MusicController: UIViewController, ObservableObject {
             player.currentTime = lastPlaybackTime
             player.play()
         }
+    }
+    
+    func setVolume() {
+        audioPlayer?.volume = volume
+    }
+    
+    func setCurrentTime() {
+        audioPlayer?.currentTime = currentTime
     }
 }
 
