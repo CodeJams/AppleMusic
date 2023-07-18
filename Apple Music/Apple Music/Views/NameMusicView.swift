@@ -12,10 +12,10 @@ struct NameMusicView: View {
         VStack(alignment: .leading){
             
             Text(nomeDeMusicas[index])
-                .font(Font.custom("SFPro", size: 24))
+                .font(Font.custom("SFPro", size: 20))
             
             Text(nomeDeAlbuns[index])
-                .font(Font.custom("SFPro", size: 24))
+                .font(Font.custom("SFPro", size: 20))
                 .opacity(0.6)
         }
         

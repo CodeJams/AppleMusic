@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2B7FCC62A1F8A4C00646ABE /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B7FCC52A1F8A4C00646ABE /* ProgressBar.swift */; };
+		426EBE132A27D1F9004DAE3F /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426EBE122A27D1F9004DAE3F /* VolumeSlider.swift */; };
+		426EBE152A27D3F7004DAE3F /* MusicProgressSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426EBE142A27D3F7004DAE3F /* MusicProgressSlider.swift */; };
 		F248A97B2A1E424000D29A5B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248A97A2A1E424000D29A5B /* UIImage+Extension.swift */; };
 		F2E299092A24CA0300B27964 /* NameMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E299082A24CA0300B27964 /* NameMusicView.swift */; };
 		F2E5016E2A24E034008935BC /* BottonButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5016D2A24E034008935BC /* BottonButtons.swift */; };
@@ -25,7 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C2B7FCC52A1F8A4C00646ABE /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		426EBE122A27D1F9004DAE3F /* VolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSlider.swift; sourceTree = "<group>"; };
+		426EBE142A27D3F7004DAE3F /* MusicProgressSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProgressSlider.swift; sourceTree = "<group>"; };
 		F248A97A2A1E424000D29A5B /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F2E299082A24CA0300B27964 /* NameMusicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameMusicView.swift; sourceTree = "<group>"; };
 		F2E5016D2A24E034008935BC /* BottonButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottonButtons.swift; sourceTree = "<group>"; };
@@ -98,11 +100,12 @@
 				F2E299082A24CA0300B27964 /* NameMusicView.swift */,
 				FA2688972A1CFCBD0043DF90 /* Apple_MusicApp.swift */,
 				FA2688992A1CFCBD0043DF90 /* MusicPlayer.swift */,
-				C2B7FCC52A1F8A4C00646ABE /* ProgressBar.swift */,
 				F2E5016D2A24E034008935BC /* BottonButtons.swift */,
 				FAD66A352A1F9AC60053A584 /* Backgroud.swift */,
 				FA66241C2A20D2DA0065943B /* MusicCoverView.swift */,
 				FA3757D62A2628F5002787D7 /* PullDownMenu.swift */,
+				426EBE122A27D1F9004DAE3F /* VolumeSlider.swift */,
+				426EBE142A27D3F7004DAE3F /* MusicProgressSlider.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,10 +199,11 @@
 				FAE4BF5A2A1E3936002B5DA2 /* MusicController.swift in Sources */,
 				FAD66A362A1F9AC60053A584 /* Backgroud.swift in Sources */,
 				F2E299092A24CA0300B27964 /* NameMusicView.swift in Sources */,
+				426EBE132A27D1F9004DAE3F /* VolumeSlider.swift in Sources */,
 				F248A97B2A1E424000D29A5B /* UIImage+Extension.swift in Sources */,
 				FA26889A2A1CFCBD0043DF90 /* MusicPlayer.swift in Sources */,
 				F2E5016E2A24E034008935BC /* BottonButtons.swift in Sources */,
-				C2B7FCC62A1F8A4C00646ABE /* ProgressBar.swift in Sources */,
+				426EBE152A27D3F7004DAE3F /* MusicProgressSlider.swift in Sources */,
 				FA2688982A1CFCBD0043DF90 /* Apple_MusicApp.swift in Sources */,
 				FA3757D72A2628F5002787D7 /* PullDownMenu.swift in Sources */,
 			);
@@ -330,7 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Apple Music/Preview Content\"";
-				DEVELOPMENT_TEAM = 5DQLC63RNN;
+				DEVELOPMENT_TEAM = YXAD2TUP98;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

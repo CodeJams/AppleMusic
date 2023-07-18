@@ -9,6 +9,10 @@ struct MusicPlayer: View {
     @State var index = 0
 	@StateObject var musicController = MusicController()
     @State var musicCoverSize = 252
+    
+    @State private var color: Color = .white
+    private var normalFillColor: Color { color.opacity(0.5) }
+    private var emptyColor: Color { color.opacity(0.3) }
 
     var body: some View {
       //para resolver o problema usar geomnetry READER PARA ESCOLHER A POSIÇAO FIXA DO ITEM
@@ -23,21 +27,29 @@ struct MusicPlayer: View {
                     VStack(alignment: .center) {
                         Spacer()
                         MusicCoverView(index: $index, image: $image, musicCoverSize: $musicCoverSize)
+                            .offset(y:-100)
                         Spacer()
                     }.frame(width: geometry.size.width,
-                            height: geometry.size.height * 0.5)
+                            height: geometry.size.height * 0.65)
                     VStack {
                         HStack{
                             //nome da musica
                             NameMusicView(index: $index).foregroundColor(.white)
+                                .offset(y:-125)
                             
                             Spacer()
                             //pull down menu
                             PullDownMenu()
+                                .offset(x:10, y:-125)
                             
                         }
-                        //.padding(.top, 260)
                         .padding(.horizontal, 35)
+                        
+                        MusicProgressSlider(value: $musicController.currentTime, inRange: TimeInterval.zero...200, activeFillColor: color, fillColor: normalFillColor, emptyColor: emptyColor, height: 26) { started in
+                            musicController.setCurrentTime()
+                        }
+                        .padding(.horizontal, 35)
+                        .offset(y:-110)
                         
                         //Botões para tocar e passar a musica
                         HStack(spacing: 76){
@@ -99,10 +111,20 @@ struct MusicPlayer: View {
                                 
                             }
                         }
+                        .offset(y:-75)
+                        
+                        VolumeSlider(value: $musicController.volume, inRange: 0...1, activeFillColor: color, fillColor: normalFillColor, emptyColor: emptyColor, height: 8) { started in
+                            musicController.setVolume()
+                        }
+                        .onAppear{
+                            musicController.setVolume()
+                        }
+                        .padding(.horizontal, 35)
+                        .offset(y:-25)
                         
                         BottomButtons()
                             .foregroundColor(Color.white)
-                            .padding(.horizontal, 60)
+                            .padding(.horizontal, 70)
                             .opacity(0.7)
                         
                     }.frame(width: geometry.size.width , height: geometry.size.height * 0.5)
@@ -114,7 +136,8 @@ struct MusicPlayer: View {
                 .onAppear {self.setAverageColor()}
             }
         }
-    } 
+    }
+    
     
     //Devolve a cor média
     func setAverageColor() {
@@ -123,6 +146,7 @@ struct MusicPlayer: View {
         backgroundColor = uiColor ?? .clear
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
